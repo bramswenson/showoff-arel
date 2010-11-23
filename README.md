@@ -25,3 +25,4 @@ This presentation is to be presented at the Rubyham Meetup in Birmingham, AL on 
 * [RubyOnRails Screencast - ActiveRelation & ActiveModel](http://rubyonrails.org/screencasts/rails3/active-relation-active-model)
 * [InfoQ - Carl Lerche on Rails 3 and Arel](http://www.infoq.com/interviews/lerche-rails-arel)
 * [AT&T Interactive - ARel Two Point Ohhhhh Yaaaaaa](http://engineering.attinteractive.com/2010/10/arel-two-point-ohhhhh-yaaaaaa/)
+* [ActiveRecord::Relation vs Arel](http://metautonomo.us/2010/05/11/activerecord-relation-vs-arel/)
