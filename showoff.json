@@ -1,0 +1,10 @@
+{ "name": "Arel and Friends", 
+  "sections": [ 
+    { "section":"intro" },
+    { "section":"arel" },
+    { "section":"activerecord" },
+    { "section":"metawhere" },
+    { "section":"metasearch" },
+    { "section":"outro" }
+  ]
+}
