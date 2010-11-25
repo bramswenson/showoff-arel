@@ -12,28 +12,31 @@ This presentation is to be presented at the Rubyham Meetup in Birmingham, AL on 
 # Table of Contents #
 
 1. Introduction
-  a. Contents
+  1. Contents
 2. Intro to ARel
-  a. ARel History
-  b. ARel 2.x / Rails 3.0.3
-  c. Produces SQL
-  d. AST Based
-  e. ARel Source
-  f. ARel Basic Code Examples
+  1. ARel History
+  2. ARel 2.x / Rails 3.0.3
+  3. Produces SQL
+  4. AST Based
+  5. ARel Source
+  6. ARel Basic Code Examples
 3. ARel in ActiveRecord
-  a. Scopes and Conditions Hashes
-  b. ActiveRecord Comparisons
-  c. Direct ARel Access in ActiveRecord
-  d. ARel in ActiveRecord Advanced Code Examples
+  1. Scopes and Conditions Hashes
+  2. ActiveRecord Comparisons
+  3. Direct ARel Access in ActiveRecord
+  4. ARel in ActiveRecord Advanced Code Examples
 4. MetaWhere
-  a. What it does?
-  b. Scopes and Conditions with MetaWhere
-  c. ActiveRecord Comparisons Redux
+  1. What it does?
+  2. Scopes and Conditions with MetaWhere
+  3. ActiveRecord Comparisons Redux
 5. MetaSearch
-  a. What it does?
-  b. Using it for search
-  c. Form Helpers
+  1. What it does?
+  2. Using it for search
+  3. Form Helpers
 6. Closing and Questions
+  1. ARel Rocks!
+  2. Even more with friends
+  3. Questions
 
 # Bibliography #
 
