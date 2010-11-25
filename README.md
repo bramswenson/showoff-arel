@@ -11,26 +11,29 @@ This presentation is to be presented at the Rubyham Meetup in Birmingham, AL on 
 
 # Table of Contents #
 
-1. Intro to ARel
-  a. ARel 2.x / Rails 3.0.3
-  b. Produces SQL
-  c. AST Based
-  d. ARel Classes
-  e. ARel Basic Code Examples
-2. ARel in ActiveRecord
+1. Introduction
+  a. Contents
+2. Intro to ARel
+  a. ARel History
+  b. ARel 2.x / Rails 3.0.3
+  c. Produces SQL
+  d. AST Based
+  e. ARel Source
+  f. ARel Basic Code Examples
+3. ARel in ActiveRecord
   a. Scopes and Conditions Hashes
   b. ActiveRecord Comparisons
   c. Direct ARel Access in ActiveRecord
   d. ARel in ActiveRecord Advanced Code Examples
-3. Intro to MetaWhere
+4. MetaWhere
   a. What it does?
   b. Scopes and Conditions with MetaWhere
   c. ActiveRecord Comparisons Redux
-4. Intro to MetaSearch
+5. MetaSearch
   a. What it does?
   b. Using it for search
   c. Form Helpers
-5. Closing and Questions
+6. Closing and Questions
 
 # Bibliography #
 
@@ -50,5 +53,9 @@ This presentation is to be presented at the Rubyham Meetup in Birmingham, AL on 
 * [InfoQ - Carl Lerche on Rails 3 and ARel](http://www.infoq.com/interviews/lerche-rails-arel)
 * [AT&T Interactive - ARel Two Point Ohhhhh Yaaaaaa](http://engineering.attinteractive.com/2010/10/arel-two-point-ohhhhh-yaaaaaa/)
 * [ActiveRecord::Relation vs ARel](http://metautonomo.us/2010/05/11/activerecord-relation-vs-arel/)
+* [Ruby AST for fun and profit](http://www.igvita.com/2008/12/11/ruby-ast-for-fun-and-profit/)
+* [Ruby ASTs](http://www.rubyinside.com/fun-with-rubys-abstract-syntax-trees-1401.html)
+* [Abstract Syntax Tree](http://en.wikipedia.org/wiki/Abstract_syntax_tree)
+* [Relational Algebra](http://en.wikipedia.org/wiki/Relational_algebra)
 
 

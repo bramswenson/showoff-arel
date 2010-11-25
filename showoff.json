@@ -1,6 +1,7 @@
 { "name": "Arel and Friends", 
   "description": "An in depth review of Arel and Friends",
   "sections": [ 
+    { "section":"intro" },
     { "section":"arel_intro" },
     { "section":"arel_activerecord" },
     { "section":"metawhere" },
