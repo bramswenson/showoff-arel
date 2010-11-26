@@ -1,44 +1,37 @@
 # Showoff ARel #
 
-This presentation is to be presented at the Rubyham Meetup in Birmingham, AL on December 1st 2010. The primary goals of this presentation are as follows:
+This presentation will initially be presented at the Rubyham Meetup in Birmingham, AL on December 1st 2010.
 
-* Introduce ARel
-* Detail the inner workings of ARel as it relates to use with ActiveRecord
-* Introduce MetaWhere
-* Detail the inner workings of MetaWhere and how it improves "where" (a.k.a. conditions) hashes in ActiveRecord
-* Introduce MetaSearch
-* Touch on the use of MetaSearch in a Rails Project
-
-# Table of Contents #
+## Table of Contents ##
 
 1. Introduction
-    1. Contents
 2. Intro to ARel
-    1. ARel History
-    2. ARel 2.x / Rails 3.0.3
-    3. Produces SQL
-    4. AST Based
-    5. ARel Source
-    6. ARel Basic Code Examples
-3. ARel in ActiveRecord
+    1. What is ARel?
+    2. Who Wrote ARel?
+3. Exploring ARel
+    1. ARel and SQL
+    2. ARel is ASTified
+    3. How does it work?
+4. ARel in ActiveRecord 3
+    3. ARel and ActiveRecord Versions
     1. Scopes and Conditions Hashes
     2. ActiveRecord Comparisons
     3. Direct ARel Access in ActiveRecord
     4. ARel in ActiveRecord Advanced Code Examples
-4. MetaWhere
+5. MetaWhere
     1. What it does?
     2. Scopes and Conditions with MetaWhere
     3. ActiveRecord Comparisons Redux
-5. MetaSearch
+6. MetaSearch
     1. What it does?
     2. Using it for search
     3. Form Helpers
-6. Closing and Questions
+7. Closing and Questions
     1. ARel Rocks!
     2. Even more with friends
     3. Questions
 
-# Bibliography #
+## Bibliography ##
 
 * [ARel](https://github.com/rails/arel)
 * [MetaWhere](http://metautonomo.us/projects/metawhere/)

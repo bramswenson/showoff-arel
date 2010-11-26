@@ -3,6 +3,7 @@
   "sections": [ 
     { "section":"intro" },
     { "section":"arel_intro" },
+    { "section":"exploring_arel" },
     { "section":"arel_activerecord" },
     { "section":"metawhere" },
     { "section":"metasearch" },

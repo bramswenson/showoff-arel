@@ -1,0 +1,39 @@
+source 'http://rubygems.org'
+
+gem 'rails', '3.0.3'
+gem 'pg'
+
+# Use rails3-generators for some niftyness
+gem 'rails3-generators'
+
+# Use haml, sass and compass for markup and css
+gem 'haml', '>=3.0.18'
+gem 'haml-rails', '>=0.3'
+
+# Use jquery for javascripting
+gem 'jquery-rails'
+
+# Use devise for user auth
+gem 'devise'
+
+group :development, :test do
+  gem 'mongrel'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'cucumber'
+  gem 'pickle'
+  gem 'rspec', '>=2.1.0'
+  gem 'rspec-rails', '>=2.1.0'
+  gem 'spork'
+  gem 'launchy'
+  gem 'capybara-envjs'
+  gem 'factory_girl'
+  gem 'autotest'
+  gem 'annotate-models'
+  gem 'rb-inotify'
+end
+
+group :console do
+  gem 'wirble'
+end
