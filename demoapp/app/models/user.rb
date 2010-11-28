@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
   has_many :posts,       :dependent => :destroy
   has_many :ratings,     :dependent => :destroy, :foreign_key => :rater_id
   has_many :posts_rated, :through => :ratings, :source => :post
+  has_many :source_followings,  :dependent => :destroy, :class_name => 'Following', :foreign_key => :follower_id
+  has_many :target_followings,  :dependent => :destroy, :class_name => 'Following', :foreign_key => :followed_id
+  has_many :following,   :through => :source_followings, :source => :followed
+  has_many :followers,   :through => :target_followings, :source => :follower
 
   validates :blog_name, :presence => true, :uniqueness => true
   
