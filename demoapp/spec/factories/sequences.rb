@@ -14,10 +14,11 @@ def random_body(paragraph_count=nil)
   Lorem::Base.new(:words, paragraph_count)
 end
 
+DICT = File.readlines('/usr/share/dict/words').delete_if { |l| l.blank? }
+
 def random_name( words = 2, allow_specials = false, downcase = false )
-  dict = File.readlines('/usr/share/dict/words').delete_if { |l| l.blank? }
   (1..words).map do
-    w = dict[rand(dict.length)]
+    w = DICT[rand(DICT.length)]
     w = w.downcase if downcase
     w = w.gsub(/[^0-9a-zA-Z@\.]/, '')
     w.chomp
