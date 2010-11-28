@@ -14,6 +14,9 @@
     # transform the built up AST to sql
     all_users.to_sql
       => "SELECT * FROM 'users'"
+    # transform the built up AST to dot
+    all_users.to_dot
+     => "digraph "ARel" {\nnode [width...
  
     # all in one line
     Arel::Table.new(:users).project(Arel.sql('*')).to_sql 

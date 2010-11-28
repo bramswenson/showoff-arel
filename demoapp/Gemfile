@@ -16,6 +16,9 @@ gem 'jquery-rails'
 # Use devise for user auth
 gem 'devise'
 
+# Generate lipsum lorem text
+gem 'lorem'
+
 group :development, :test do
   gem 'mongrel'
   gem 'capybara'
@@ -32,6 +35,7 @@ group :development, :test do
   gem 'autotest'
   gem 'annotate-models'
   gem 'rb-inotify'
+  gem 'awesome_print', :require => 'ap'
 end
 
 group :console do
