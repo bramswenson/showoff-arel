@@ -19,6 +19,9 @@ gem 'devise'
 # Generate lipsum lorem text
 gem 'lorem'
 
+# tagging
+gem 'acts-as-taggable-on'
+
 group :development, :test do
   gem 'mongrel'
   gem 'capybara'
