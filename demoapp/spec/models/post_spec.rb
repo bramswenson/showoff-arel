@@ -2,9 +2,12 @@ require 'spec_helper'
 
 describe Post do
   before(:each) do
-    @user = Factory(:user, :email => 'neo@matrix.com', :password => 'trinity1',
-                    :password_confirmation => 'trinity1')
-    @post = Factory(:post, :user => @user, :title => 'All about Morpheus')
+    @user = User.last || 
+            Factory.create(:user, :email => 'neo@matrix.com', 
+                           :password => 'trinity1',
+                           :password_confirmation => 'trinity1')
+    @post = Post.last || 
+            Factory(:post, :user => @user, :title => 'All about Morpheus')
   end
     
   context "should not be valid" do
