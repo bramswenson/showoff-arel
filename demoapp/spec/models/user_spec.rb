@@ -45,4 +45,10 @@ describe User do
     @user.blog_slug.should_not be_blank
   end
   
+  it "should titleize the blog_name" do
+    @user.blog_name = 'this old blog'
+    @user.save!
+    @user.blog_name.should == 'This Old Blog'
+  end
+  
 end

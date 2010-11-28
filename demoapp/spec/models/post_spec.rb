@@ -40,4 +40,10 @@ describe Post do
     @post.slug.should_not be_blank
   end
   
+  it "should titleize the title" do
+    @post.title = 'this old post'
+    @post.save!
+    @post.title.should == 'This Old Post'
+  end
+  
 end

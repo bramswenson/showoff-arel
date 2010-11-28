@@ -20,17 +20,17 @@ def random_name( words = 2, allow_specials = false, downcase = false )
   (1..words).map do
     w = DICT[rand(DICT.length)]
     w = w.downcase if downcase
-    w = w.gsub(/[^0-9a-zA-Z@\.]/, '')
-    w.chomp
-  end
+    w = w.gsub(/[^0-9a-zA-Z@\.]/, '') unless allow_specials
+    w.chop
+  end.join(' ')
 end
 
 def random_email 
-  [ random_name(1, true), '@', random_name(1, true), '.com' ].join
+  [ random_name(1, false, true), '@', random_name(1, false, true), '.com' ].join
 end
 
 Factory.sequence(:name)    { random_name }
 Factory.sequence(:email)   { random_email }
-Factory.sequence(:title)   { random_name }
+Factory.sequence(:title)   { random_name(rand(4)+1, true, false) }
 Factory.sequence(:body)    { random_body }
 Factory.sequence(:comment) { random_body(1) }
