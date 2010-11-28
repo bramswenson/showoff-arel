@@ -156,6 +156,7 @@ GEM
       rubyzip
     spork (0.8.4)
     stackdeck (0.2.0)
+    stringex (1.2.0)
     term-ansicolor (1.0.5)
     thor (0.14.6)
     treetop (1.4.9)
@@ -197,4 +198,5 @@ DEPENDENCIES
   rspec (>= 2.1.0)
   rspec-rails (>= 2.1.0)
   spork
+  stringex
   wirble
