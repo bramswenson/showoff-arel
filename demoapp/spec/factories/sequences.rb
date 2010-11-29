@@ -31,6 +31,6 @@ end
 
 Factory.sequence(:name)    { random_name }
 Factory.sequence(:email)   { random_email }
-Factory.sequence(:title)   { random_name(rand(4)+1, true, false) }
+Factory.sequence(:title)   { random_name(rand(8)+1, true, false) }
 Factory.sequence(:body)    { random_body }
 Factory.sequence(:comment) { random_body(1) }

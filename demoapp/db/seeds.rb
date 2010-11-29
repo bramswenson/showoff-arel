@@ -3,27 +3,58 @@
 #
 # Examples:
 #
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
+#   cities = City.create!([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
+#   Mayor.create!(:name => 'Daley', :city => cities.first)
 require Rails.root.join('spec/spec_helper.rb')
 
 def rand_range
-  (1..(rand(20)+1))
+  (1..(rand(50)+1))
 end
-(1..20).each do
-  user = User.create(:email => Factory.next(:email), 
-                     :blog_name => Factory.next(:title))
+
+(1..100).each do
+  email = Factory.next(:email)
+  puts "trying email: #{email}"
+  begin
+    user = User.create!(:email => email,
+                    :blog_name => Factory.next(:title),
+                    :password => random_chars(10))
+  rescue
+    next
+  end
   puts "Added user: #{user.email}"
   rand_range.each do
-    post = Post.create(:user => user, :title => Factory.next(:title),
+    post = Post.create!(:user => user, :title => Factory.next(:title),
                        :body => Factory.next(:body))
     puts "  Added post for #{user.email}: #{post.title}"
     rand_range.each do
-      comment = Comment.create(:name => Factory.next(:name), 
+      comment = Comment.create!(:name => Factory.next(:name), 
                                :title => Factory.next(:title),
-                               :comment => Factory.next(:comment))
+                               :comment => Factory.next(:comment),
+                               :post => post)
       puts "    Added comment for #{post.title}: #{comment.title}"
     end
   end
 end
 
+puts "User Count #{User.count}"
+puts "Post Count #{Post.count}"
+
+@all_user_ids = User.select(:id).all.map { |u| u.id }
+@all_post_ids = Post.select(:id).all.map { |p| p.id }
+
+User.all.each do |user|
+  puts "Rocking with user #{user.email}"
+  (1..rand(@all_post_ids.size)).each do |i|
+    available_post_ids = @all_post_ids - user.posts_rated.all.map { |p| p.id }
+    post = Post.find(available_post_ids[ rand( available_post_ids.size ) ])
+    rating = rand(4) + 1
+    rating = Rating.create!(:rater => user, :rating => rating, :post => post)
+    puts "  #{rating.rater.email} gave #{rating.rating} stars to #{rating.post.title}"
+  end
+  (1..rand(@all_user_ids.size)).each do |i|
+    available_user_ids = @all_user_ids - user.following.all.map { |u| u.id }
+    followed = User.find(available_user_ids[ rand( available_user_ids.size ) ])
+    following = Following.create!(:follower => user, :followed => followed)
+    puts "  #{following.follower.email} is now following #{following.followed.email}"
+  end
+end
