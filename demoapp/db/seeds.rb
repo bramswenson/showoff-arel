@@ -8,10 +8,10 @@
 require Rails.root.join('spec/spec_helper.rb')
 
 def rand_range
-  (1..(rand(50)+1))
+  (1..(rand(10)+1))
 end
 
-(1..100).each do
+(1..25).each do
   email = Factory.next(:email)
   puts "trying email: #{email}"
   begin
@@ -44,7 +44,7 @@ puts "Post Count #{Post.count}"
 
 User.all.each do |user|
   puts "Rocking with user #{user.email}"
-  (1..rand(@all_post_ids.size)).each do |i|
+  (1..rand(@all_post_ids.size/2)).each do |i|
     available_post_ids = @all_post_ids - user.posts_rated.all.map { |p| p.id }
     post = Post.find(available_post_ids[ rand( available_post_ids.size ) ])
     rating = rand(4) + 1
