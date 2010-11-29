@@ -26,7 +26,8 @@ def random_name( words = 2, allow_specials = false, downcase = false )
 end
 
 def random_email 
-  [ random_name(1, false, true), '@', random_name(1, false, true), '.com' ].join
+  domains = %w{ craniumisajar.com starwars.com matrix.com }
+  [ random_name(1, false, true), '@', domains[rand(domains.size)] ].join
 end
 
 Factory.sequence(:name)    { random_name }
