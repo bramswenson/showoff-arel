@@ -1,8 +1,16 @@
-!SLIDE smaller transition=toss
+!SLIDE transition=toss
+## InsertManager ##
 
-    # how about something more complex
-    users_table.
-      where(email_attr.matches('%arel%')).
-      project(Arel.sql('*')).to_sql
-     => "SELECT * FROM "users" WHERE "users"."email" ILIKE '%arel%'"
+!SLIDE small incremental transition=toss
+
+    @@@ruby
+    users = Arel::Table.new(:users)
+    manager = Arel::InsertManager.new(users.engine)
+    manager.insert([
+        [ users[:email], 'bram@craniumisajar.com' ],
+        [ users[:blog_name], 'Cranium Is Ajar' ]
+    ])
+     => "INSERT INTO "users" ("email", "blog_name") 
+         VALUES ('joe@craniumisajar.com', 'Cranium Is Ajar')"
+
 
