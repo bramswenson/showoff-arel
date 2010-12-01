@@ -2,30 +2,31 @@
 
     @@@ruby
     # predicates in action return Arel::Node instances
-    email_attr.eq('arel@rails.com').class
+    users = Arel::Table.new(:users)
+    users[:email].eq('bram@craniumisajar.com').class
      => Arel::Nodes::Equality
 
     # which can transform to sql
-    email_attr.eq('arel@rails.com').to_sql
-     => ""users"."email" = 'arel@rails.com'"
+    users[:email].eq('bram@craniumisajar.com').to_sql
+     => ""users"."email" = 'bram@craniumisajar.com'"
 
     # matching predicate syntax is sql not regex
-    email_attr.matches('%arel%').to_sql
-     => ""users"."email" ILIKE '%arel%'"
+    users[:email].matches('%craniumisajar%').to_sql
+     => ""users"."email" ILIKE '%craniumisajar%'"
 
     # matching predicate syntax is sql not regex
-    email_attr.matches('%arel%').to_sql
-     => ""users"."email" ILIKE '%arel%'"
+    users[:email].matches('%craniumisajar%').to_sql
+     => ""users"."email" ILIKE '%craniumisajar%'"
 
     # there are some nice "any" and "all" predicates
     # for passing in multiple predicate options at once
-    email_attr.matches_any([ '%arel%', '%rails%']).to_sql
-     => "("users"."email" ILIKE '%arel%' OR 
-          "users"."email" ILIKE '%rails%')" 
+    users[:email].matches_any([ '%craniumisajar%', '%gmail%']).to_sql
+     => "("users"."email" ILIKE '%craniumisajar%' OR 
+          "users"."email" ILIKE '%gmail%')" 
 
     # count is an expression
-    email_attr.count.to_sql
+    users[:email].count.to_sql
      => "COUNT("users"."email")" 
-    email_attr.count(true).to_sql
+    users[:email].count(true).to_sql
       => "COUNT(DISTINCT "users"."email")"
     

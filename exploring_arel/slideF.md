@@ -1,10 +1,10 @@
 !SLIDE smaller transition=toss
 
     @@@ruby
-    # columns are avaialble as 
+    # columns/attributes are avaialble as 
     # Arel::Attribute subclasses via []
-    email_attr = users_table[:email]
-    email_attr.class
+    users = Arel::Table.new(:users)
+    users[:email]
       => Arel::Attributes::String
 
     # Arel::Attributes::Attribute instances are simply 

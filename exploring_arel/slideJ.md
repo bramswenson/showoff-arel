@@ -1,11 +1,20 @@
+!SLIDE transition=toss
+## SelectManager ##
+
 !SLIDE smbullets incremental transition=toss
-### TreeManagers put it all together ###
-
-* TreeManagers are structured collections of nodes which represent entire queries
-* There are several TreeManager subclasses
-* InsertManager
-* SelectManager
-* UpdateManager
-* DeleteManager
-
+    @@@ruby
+    # many methods of Arel::Table
+    # return Arel::TreeManager subclasses
+    users.where(users[:email].matches('%craniumisajar%')).
+      project(Arel.sql('*')).class
+     => Arel::SelectManager 
+    users.where(users[:email].matches('%craniumisajar%')).
+      project(Arel.sql('*')).to_sql
+     => "SELECT * FROM "users" WHERE "users"."email" ILIKE '%craniumisajar%'"
+    
+    # remember to add project for any select clauses
+    users.where(users[:email].matches('%craniumisajar%')).
+      project(users[:email]).to_sql
+     => "SELECT "users"."email" FROM "users" 
+         WHERE "users"."email" ILIKE '%craniumisajar%'"
 

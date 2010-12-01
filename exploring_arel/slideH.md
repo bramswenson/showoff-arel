@@ -1,8 +1,7 @@
 !SLIDE smaller transition=toss
 
     @@@ruby
-    # There are quite a few predicates available for building 
-    # queries of many types
+    # There are many predicates available
     Arel::Predications.instance_methods.sort
       => ["asc", "desc", "does_not_match", "does_not_match_all", 
           "does_not_match_any", "eq", "eq_all", "eq_any", "gt", 

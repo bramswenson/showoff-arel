@@ -1,7 +1,8 @@
-!SLIDE bullets incremental transition=toss
-## ARel and SQL ##
+!SLIDE smbullets incremental transition=toss
+## ARel Does SQL And More ##
 
-* Produces SQL strings for various Databases (Postgresql, MySQL, Oracle, and more)
-* Produces dot files (for use by programs like graphviz)
-* Can/Could/Will? produce output for other formats (JSON, XML)
+* Produces optimized SQL query strings for various Databases (Postgresql, MySQL, Oracle, and more)
+* Generates dot syntax strings that represent queries (for use by programs like graphviz)
+* Can/Could/Will? transform output for persisting other formats (JSON, XML)
+produce
 

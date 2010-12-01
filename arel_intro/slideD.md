@@ -5,5 +5,5 @@
 * ![Bryan Helmkamp](../images/bhelmkamp.jpg)
 * The Rails fork of ARel is maintained by [Aaron Patterson](http://tenderlovemaking.com/) from AT&T Interactive Engineering
 * ![Arron Patterson](../images/tenderlove.jpg)
-* Related?
+* Cousin?
 * ![Weird Al](../images/weirdal.jpg)
