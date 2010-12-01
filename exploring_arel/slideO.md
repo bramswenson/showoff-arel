@@ -1,6 +1,3 @@
-!SLIDE transition=toss
-## What about Joins ##
-
 !SLIDE smaller incremental transition=toss
 
     @@@ruby

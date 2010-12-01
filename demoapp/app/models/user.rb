@@ -19,6 +19,14 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :blog_name
 
+  scope :from_domain_sql, lambda { |domain|
+    where("users.email ILIKE ?", "%#{domain}%")
+  }
+
+  scope :from_domain_arel, lambda { |domain|
+    where(arel_table[:email].matches("%#{domain}%"))
+  }
+
   private
     def titleize_blog_name
       self.blog_name = self.blog_name.titleize unless self.blog_name.blank?

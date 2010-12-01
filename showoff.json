@@ -4,7 +4,7 @@
     { "section":"intro" },
     { "section":"arel_intro" },
     { "section":"exploring_arel" },
-    { "section":"arel_activerecord" },
+    { "section":"arel_in_ar" },
     { "section":"metawhere" },
     { "section":"metasearch" },
     { "section":"outro" }

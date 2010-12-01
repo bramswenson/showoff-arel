@@ -14,22 +14,9 @@ This presentation will initially be presented at the Rubyham Meetup in Birmingha
     3. How does it work?
 4. ARel in ActiveRecord
     1. ARel and ActiveRecord Versions
-    2. Scopes and Conditions Hashes
-    3. ActiveRecord Comparisons
-    4. Direct ARel Access in ActiveRecord
-    5. ARel in ActiveRecord Advanced Code Examples
-5. MetaWhere
-    1. What it does?
-    2. Scopes and Conditions with MetaWhere
-    3. ActiveRecord Comparisons Redux
-6. MetaSearch
-    1. What it does?
-    2. Using it for search
-    3. Form Helpers
+    2. How does ActiveRecord use ARel
+    3. Comparing Conditions Hashes
 7. Closing and Questions
-    1. ARel Rocks!
-    2. Even more with friends
-    3. Questions
 
 ## Bibliography ##
 
