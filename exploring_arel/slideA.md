@@ -1,2 +1,2 @@
-!SLIDE bullets incremental transition=toss
+!SLIDE transition=toss
 # Exploring ARel #
