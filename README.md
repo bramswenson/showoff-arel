@@ -12,12 +12,12 @@ This presentation will initially be presented at the Rubyham Meetup in Birmingha
     1. ARel and SQL
     2. ARel is ASTified
     3. How does it work?
-4. ARel in ActiveRecord 3
-    3. ARel and ActiveRecord Versions
-    1. Scopes and Conditions Hashes
-    2. ActiveRecord Comparisons
-    3. Direct ARel Access in ActiveRecord
-    4. ARel in ActiveRecord Advanced Code Examples
+4. ARel in ActiveRecord
+    1. ARel and ActiveRecord Versions
+    2. Scopes and Conditions Hashes
+    3. ActiveRecord Comparisons
+    4. Direct ARel Access in ActiveRecord
+    5. ARel in ActiveRecord Advanced Code Examples
 5. MetaWhere
     1. What it does?
     2. Scopes and Conditions with MetaWhere
